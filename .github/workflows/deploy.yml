@@ -2,7 +2,6 @@ name: Deploy Vite React App to GitHub Pages
 
 on:
   push:
-    # Auto-detect default branch using main or master
     branches:
       - master
       - main
@@ -19,6 +18,8 @@ concurrency:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages  # ✅ REQUIRED for deploy-pages v4
 
     steps:
       # 1️⃣ Checkout repo
@@ -36,7 +37,7 @@ jobs:
       - name: Install dependencies
         run: |
           npm install
-          npm list # verify all packages installed
+          npm list
 
       # 4️⃣ Fix permissions for Vite binary
       - name: Make Vite executable
