@@ -11,7 +11,7 @@ export default function App() {
   // Preload background image
   useEffect(() => {
     const img = new Image()
-    img.src = '/background.jpg'
+    img.src = 'background.jpg'
     img.onload = () => setBgLoaded(true)
   }, [])
 
@@ -22,7 +22,7 @@ export default function App() {
       date: '11 Mar 2026',
       time: '11:00 AM onwards',
       note: 'Dress code: Pastel colors',
-      img: '/haldi.jpg'
+      img: 'haldi.jpg'
     },
     {
       key: 'mehfil',
@@ -30,7 +30,7 @@ export default function App() {
       date: '11 Mar 2026',
       time: '7:00 PM onwards',
       note: 'Dress code: Indo-western',
-      img: '/mehfil.jpg'
+      img: 'mehfil.jpg'
     },
     {
       key: 'mayra',
@@ -38,7 +38,7 @@ export default function App() {
       date: '12 Mar 2026',
       time: '9:00 AM onwards',
       note: 'Dress code: Red & White',
-      img: '/mayra.jpg'
+      img: 'mayra.jpg'
     },
     {
       key: 'baraat',
@@ -46,7 +46,7 @@ export default function App() {
       date: '12 Mar 2026',
       time: '12:30 PM onwards',
       note: '',
-      img: '/baraat.jpg'
+      img: 'baraat.jpg'
     },
     {
       key: 'phera',
@@ -54,7 +54,7 @@ export default function App() {
       date: '12 Mar 2026',
       time: '4:00 PM onwards',
       note: '',
-      img: '/phera.jpg'
+      img: 'phera.jpg'
     },
     {
       key: 'reception',
@@ -62,7 +62,7 @@ export default function App() {
       date: '12 Mar 2026',
       time: '7:30 PM onwards',
       note: '',
-      img: '/reception.jpg'
+      img: 'reception.jpg'
     }
   ]
 
