@@ -36,7 +36,7 @@ jobs:
 
       # 4️⃣ Build the app
       - name: Build the app
-        run: npx vite build   # ✅ avoids "Permission denied" issue
+        run: npm run build   # ✅ use the npm script instead of npx
 
       # 5️⃣ Setup GitHub Pages
       - name: Setup GitHub Pages
