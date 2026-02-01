@@ -2,8 +2,10 @@ name: Deploy Vite React App to GitHub Pages
 
 on:
   push:
+    # Auto-detect default branch using main or master
     branches:
       - master
+      - main
 
 permissions:
   contents: read
@@ -19,41 +21,57 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 1️⃣ Checkout repo
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      # 2️⃣ Setup Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18
           cache: npm
 
+      # 3️⃣ Install dependencies
       - name: Install dependencies
         run: |
           npm install
-          npm list # check installed packages
+          npm list # verify all packages installed
 
-      - name: Verify Node and NPM
+      # 4️⃣ Fix permissions for Vite binary
+      - name: Make Vite executable
+        run: chmod +x ./node_modules/.bin/vite
+
+      # 5️⃣ Verify Node, NPM, and Vite
+      - name: Verify environment
         run: |
           node -v
           npm -v
-          npx vite --version # confirm vite is accessible
+          npx vite --version
 
+      # 6️⃣ Build the app
       - name: Build the app
         run: npm run build
 
+      # 7️⃣ Verify build folder
       - name: Verify build folder
         run: |
+          if [ ! -d "dist" ]; then
+            echo "Error: dist folder not found!"
+            exit 1
+          fi
           ls -la dist
-          echo "Build folder ready"
 
+      # 8️⃣ Setup GitHub Pages
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
 
+      # 9️⃣ Upload Pages artifact
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: dist
 
+      # 🔟 Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
