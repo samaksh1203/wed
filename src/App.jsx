@@ -61,7 +61,7 @@ export default function App() {
       title: 'Reception',
       date: '12 Mar 2026',
       time: '7:30 PM onwards',
-      note: 'Dre',
+      note: '',
       img: 'reception.jpg'
     }
   ]
@@ -75,7 +75,8 @@ export default function App() {
 
   const contacts = [
     { name: 'Sunil Patni', phone: '8603110392' },
-    { name: 'Rajesh Godha', phone: '9767885223' }
+    { name: 'Deepak Jain', phone: '9260996515' },
+    { name: 'Khsuhal Jain', phone: '7209716023' }
   ]
 
   const parents = {
@@ -194,7 +195,7 @@ export default function App() {
         transition={{ duration: 0.6 }}
       >
         <p className="invite-message">We cordially invite you to grace the auspicious wedding ceremony of Akshat and Samiksha. Your presence and blessings will make the occasion truly special. 🙏🏽</p>
-        <h3>Patni & Godha Family</h3>
+        <h3>Patni Family</h3>
         <div className="address centered">
           <h4>RSVP</h4>
           {contacts.map(c => (
