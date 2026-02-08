@@ -21,7 +21,7 @@ export default function App() {
       title: 'Phoolon ki Haldi',
       date: '11 Mar 2026',
       time: '11:00 AM onwards',
-      note: 'Dress code: Pastel colors',
+      note: 'Dress code: Floral and pop colors',
       img: 'haldi.jpg'
     },
     {
@@ -29,7 +29,7 @@ export default function App() {
       title: 'Mehfil-e-Sangeet',
       date: '11 Mar 2026',
       time: '7:00 PM onwards',
-      note: 'Dress code: Indo-western',
+      note: 'Dress code: Glitters and Glams / Indo-Western',
       img: 'mehfil.jpg'
     },
     {
@@ -37,7 +37,7 @@ export default function App() {
       title: 'Mayra',
       date: '12 Mar 2026',
       time: '9:00 AM onwards',
-      note: 'Dress code: Red & White',
+      note: 'Dress code: Red & Whites / Red Chunri',
       img: 'mayra.jpg'
     },
     {
@@ -45,7 +45,7 @@ export default function App() {
       title: 'Baraat',
       date: '12 Mar 2026',
       time: '12:30 PM onwards',
-      note: '',
+      note: 'Dress code: Traditionals',
       img: 'baraat.jpg'
     },
     {
@@ -53,7 +53,7 @@ export default function App() {
       title: 'Phera',
       date: '12 Mar 2026',
       time: '4:00 PM onwards',
-      note: '',
+      note: 'Dress code: Traditionals',
       img: 'phera.jpg'
     },
     {
@@ -61,7 +61,7 @@ export default function App() {
       title: 'Reception',
       date: '12 Mar 2026',
       time: '7:30 PM onwards',
-      note: '',
+      note: 'Dre',
       img: 'reception.jpg'
     }
   ]
@@ -194,7 +194,7 @@ export default function App() {
         transition={{ duration: 0.6 }}
       >
         <p className="invite-message">We cordially invite you to grace the auspicious wedding ceremony of Akshat and Samiksha. Your presence and blessings will make the occasion truly special. 🙏🏽</p>
-        <h3>Patni And Godha Family</h3>
+        <h3>Patni & Godha Family</h3>
         <div className="address centered">
           <h4>RSVP</h4>
           {contacts.map(c => (

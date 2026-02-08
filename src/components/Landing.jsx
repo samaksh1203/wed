@@ -29,7 +29,7 @@ export default function Landing() {
 		<section className="hero-section-full">
 			<div className="hero-bg-full" style={{ backgroundImage: 'url(cover.jpg)' }} />
 			<div className="hero-overlay-full" />
-			<div className="site-hashtag">#SamAksh</div>
+			<div className="site-hashtag">#ASweWished</div>
 
 			<motion.div
 				className="hero-text-bottom"
