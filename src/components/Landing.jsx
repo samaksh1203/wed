@@ -8,7 +8,7 @@ export default function Landing() {
   }
 
   // Title animation
-  const title = "Samiksha weds Akshat"
+  const title = "Akshat weds Samiksha"
   const letters = title.split("")
 
   // Background images
