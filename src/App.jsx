@@ -76,7 +76,7 @@ export default function App() {
   const contacts = [
     { name: 'Sunil Patni', phone: '8603110392' },
     { name: 'Deepak Jain', phone: '9260996515' },
-    { name: 'Khsuhal Jain', phone: '7209716023' }
+    { name: 'Khushal Jain', phone: '7209716023' }
   ]
 
   const parents = {
